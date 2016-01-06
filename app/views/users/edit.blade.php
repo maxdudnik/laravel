@@ -8,15 +8,19 @@
 			{{ Form::text('username') }}
 		</div>
 		<div>
-			{{ Form::label('password','Old password:') }}
+			{{ Form::label('password','Password:') }}
 			{{ Form::password('password') }}
 			{{ $errors->first('password') }}
 		</div>
 		<div>
+			{{ Form::label('email','Email:') }}
+			{{ Form::text('email') }}
+		</div>
+		<!-- <div>
 			{{ Form::label('newpassword','New password:') }}
 			{{ Form::password('newpassword') }}
 
-		</div>
+		</div> -->
 		<div>
 			{{ Form::label('firstname','First name:') }}
 			{{ Form::text('firstname') }}
@@ -29,7 +33,7 @@
 		</div>
 		<div>
 			{{ Form::label('gender','Gender:') }}
-			{{ Form::text('gender') }}
+			{{ Form::select('gender', array('male' => 'male', 'female' => 'female')) }}
 		</div>
 		<div>
 			{{ Form::label('about','About:') }}

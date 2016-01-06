@@ -2,7 +2,7 @@
 
 @section('content')
 	<h1>Registration - Step 1</h1>
-	{{ Form::open(['url' => 'step2']) }}
+	{{ Form::open(['url' => 'step1']) }}
 		<div>
 			{{ Form::label('username','Username:') }}
 			{{ Form::text('username') }}

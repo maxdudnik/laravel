@@ -4,9 +4,9 @@
 	<h1>Registration</h1>
 	{{ Form::open(['route' => 'users.store']) }}
 		<div>
-			{{ Form::label('name','Username:') }}
-			{{ Form::text('name') }}
-			{{ $errors->first('name') }}
+			{{ Form::label('username','Username:') }}
+			{{ Form::text('username') }}
+			{{ $errors->first('username') }}
 		</div>
 		<div>
 			{{ Form::label('password','Password:') }}

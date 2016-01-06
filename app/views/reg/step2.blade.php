@@ -2,20 +2,17 @@
 
 @section('content')
 	<h1>Registration - Step 2</h1>
-	{{ Form::open(['url' => 'step3']) }}
-
-		{{ Form::hidden('username',"Input::old('username')") }}
-		{{ Form::hidden('email',"Input::old('email')") }}
-		{{ Form::hidden('password',"Input::old('password')") }}
+	{{ Form::open(['url' => 'step2']) }}
+		<?php var_dump(Input::all())?>
 		<div>
 			{{ Form::label('firstname','First name:') }}
 			{{ Form::text('firstname') }}
-
+			{{ $errors->first('firstname') }}
 		</div>
 		<div>
 			{{ Form::label('lastname','Last name:') }}
 			{{ Form::text('lastname') }}
-
+			{{ $errors->first('lastname') }}
 		</div>
 		<div>
 			{{ Form::label('gender','Gender:') }}

@@ -5,11 +5,13 @@
 	{{ Form::open(['route' => 'sessions.store']) }}
 		<div>
 			{{ Form::label('email','Email:') }}
-			{{ Form::email('email') }}
+			{{ Form::text('email') }}
+			{{ $errors->first('email') }}
 		</div>
 		<div>
 			{{ Form::label('password','Password:') }}
 			{{ Form::password('password') }}
+			{{ $errors->first('password') }}
 		</div>
 		<div>{{ Form::submit('Login') }}</div>
 	{{ Form::close() }}
